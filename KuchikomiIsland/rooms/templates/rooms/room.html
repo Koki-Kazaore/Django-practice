@@ -1,0 +1,19 @@
+{% extends "rooms/layout.html" %}
+
+{% block main %}
+  <h1>Room {{ room.id }}</h1>
+
+  <ul>
+    <li>Name: {{ room.room_name }}</li>
+    <li>Member: {{ room.member }}</li>
+  </ul>
+
+
+
+  <div class="home-content wrapper">
+    <p>{{ post.text }}</p>
+    <a class="button" href="{% url 'post' %}">Post</a>
+  </div>
+
+  <a href="{% url 'index' %}">Back to Room List</a>
+{% endblock %}
