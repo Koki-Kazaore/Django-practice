@@ -11,9 +11,15 @@
 
 
   <div class="home-content wrapper">
-    <p>{{ post.text }}</p>
+    {% for post in posts %}
+      <p>{{ post.text }}</p>
+    {% endfor %}
+    <input type="text" name="tweet">
     <a class="button" href="{% url 'post' %}">Post</a>
   </div>
+  
+{% endblock %}
 
-  <a href="{% url 'index' %}">Back to Room List</a>
+{% block header %}
+  <a href="{% url 'index' %}">🔙Back to Room List</a>
 {% endblock %}
