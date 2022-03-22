@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic import CreateView, TemplateView
 
 from .models import Room, Post
 # from cs50 import SQL
@@ -14,8 +15,8 @@ class PostCreateView(CreateView):
 
 class PostCreateCompleteView(TemplateView):
     template_name = 'post_create_complete.html'
-
 """
+
 
 # Create your views here.
 def index(request):
