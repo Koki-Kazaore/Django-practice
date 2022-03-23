@@ -20,8 +20,8 @@ class PostCreateCompleteView(TemplateView):
 
 # Create your views here.
 def index(request):
-  return render(request, "rooms/index.html", {
-    "rooms": Room.objects.all()
+  return render(request, "rooms/layout.html", {
+    # "rooms": Room.objects.all()
   })
 
 
