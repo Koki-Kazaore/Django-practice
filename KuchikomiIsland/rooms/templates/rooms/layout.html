@@ -52,7 +52,7 @@
             <nav class="navbar">
                 <div class="tm-navbar-bg">
                     
-                    <a class="navbar-brand text-uppercase" href="#"><img class="logo" src="/static/rooms/口コミ-skelton-2.png" alt="logo"><!--i class="fa fa-gears tm-brand-icon"></i--></a>
+                    <a class="navbar-brand text-uppercase" href="/rooms"><img class="logo" src="/static/rooms/口コミ-skelton-2.png" alt="logo"><!--i class="fa fa-gears tm-brand-icon"></i--></a>
 
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
                         &#9776;
@@ -73,12 +73,28 @@
             </nav>
         </div> 
 
-        <main>
-           {% block main %}{% endblock %}
-        </main>
+
+        <ul class="cd-hero-slider">
+
+            <!-- Page 1 Gallery One -->
+            <li class="selected">                    
+                <div class="cd-full-width">
+                    <div class="container-fluid js-tm-page-content" data-page-no="1" data-page-type="gallery">
+                        <div class="tm-img-gallery-container">
+                            <div class="tm-img-gallery gallery-one">
+                            <!-- Gallery One pop up connected with JS code below --> 
+                            
+                                {% block main %}{% endblock %}  
+
+                            </div>                                 
+                        </div>
+                    </div>                                                    
+                </div>                    
+            </li>
+        </ul> <!-- .cd-hero-slider -->
+
                 
     </div> <!-- .cd-hero -->
-    
 
     <!-- Preloader, https://ihatetomatoes.net/create-custom-preloading-screen/ -->
     <div id="loader-wrapper">
@@ -88,6 +104,7 @@
         <div class="loader-section section-right"></div>
 
     </div>
+
     
     <!-- load JS files -->
     <script src="{% static 'rooms/js/jquery-1.11.3.min.js' %}"></script>         <!-- jQuery (https://jquery.com/download/) -->
